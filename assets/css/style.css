@@ -1,0 +1,56 @@
+body {
+  background-color: wheat;
+  /* font-family: 'Open Sans', sans-serif; */
+}
+a {
+  font-size: 30px;
+  text-decoration: none;
+}
+a.logo{
+  background-color: antiquewhite;
+  font-size: 50px;
+  font-family: 'Satisfy', cursive;
+
+  text-transform: capitalize;
+}
+.text-modify{
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: overline wavy tomato 0.2em;
+}
+/*h1{
+  text-decoration-line: overline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 12px;
+  text-decoration-color: tomato;
+} */
+.sub-heading{
+  color: tomato;
+
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+
+  text-align: right;
+}
+.current-heading{
+  color: darkblue;
+}
+.sub-heading.current-heading{
+  color:fuchsia;
+}
+img{
+  border-radius: 50%;
+}
+.content{
+  font-size: 24px;
+  line-height: 1.3em;
+  text-align: justify;
+  text-indent: 1em;
+}
+footer{
+  text-align: center;
+}
+.btn{
+  border: 2px solid tomato;
+  border-radius: 50%;
+}
