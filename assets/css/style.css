@@ -1,21 +1,90 @@
-table{
-  width: 80%;
-  border: 3px solid red;
-  margin:auto;
-  border-collapse: collapse;
-  /* border-spacing: 10px;
-  border-radius: 20px; */
+:root{
+  font-size: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-th, 
-td{
-  border: 3px solid blue;
-  /* background-color: pink; */
+*{
+  box-sizing: border-box;
 }
-td{
-  width: 17.5%;
-  vertical-align: top;
-  text-align: center;
+.inner-wrapper:hover{
+  color:green;
 }
-.size{
-  width: 30%;
+
+.section{
+  width: 90%;
+  margin: auto;
+  font-size: 24px;
+}
+
+/* p{
+  color: red;
+} */
+
+/* селектор потомків*/
+.section p{
+  color:blueviolet;
+}
+
+/* селектор дочірніх*/
+.section>p{
+  color: red;
+}
+
+/*селектор сусідніх*/
+p+.inner-wrapper{
+  border: red 3px solid;
+}
+
+/*селектор родичів(братній)*/
+.wrapper>p~blockquote{
+  background-color: pink;
+}
+
+
+.main-navigate{
+  color:fuchsia;
+}
+.main-navigate__link{
+  color:inherit;
+}
+/* a:link{
+  color: bisque;
+}
+a:visited{
+  color: red;
+} */
+.main-navigate__link:hover{
+  color:green;
+}
+.main-navigate__link:focus{
+  border:green 3px solid;
+  outline: none;
+}
+/* a:active{
+  color:yellow;
+} */
+
+
+p:not(div p){
+  text-decoration: underline;
+}
+p:not(div p):hover{
+  text-decoration: underline line-through;
+}
+
+.main-navigate__list>li:first-child,
+.main-navigate__list>li:last-child,
+.main-navigate__list>li:nth-child(5){
+  list-style: none;
+}
+
+.main-navigate__list>li:nth-child(odd){
+  background-color:wheat;
+}
+
+.main-navigate__list>li:nth-child(4n+2){
+  background-color:yellow;
+}
+
+*:target{
+  background-color: aqua;
 }
