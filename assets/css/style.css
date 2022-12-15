@@ -1,5 +1,6 @@
 :root {
   font-size: 18px;
+  height: 300vh;
 }
 * {
   box-sizing: border-box;
@@ -7,51 +8,83 @@
   margin: 0;
 }
 .wrapper {
-  /* min-width: 300px; */
-  width: 100%;
-  /* max-width: 900px; */
-  /* min-height: 100px; */
-  height: 100vh;
-  /* max-height: 150px; */
+  width: 80%;
+  height: 60vh;
   padding: 5%;
   margin: auto;
 
-  /* overflow-y: scroll; */
+  position: relative;
 
   background-color: aquamarine;
-  background-image: linear-gradient(0deg, rgba(189,195,34,1) 0%, rgba(224,222,40,1) 49%, rgba(40,168,225,1) 49%, rgba(45,143,253,1) 100%), url(./../images/Cat_August_2010-4.jpg);
-  background-size: 200px 100px, cover;
-  background-position: top right;
-  background-repeat: repeat-y, no-repeat;
-  background-attachment: scroll, fixed;
-
-  text-align: center;
 }
 .inner {
   width: 50vmin;
-  height: 50vmin;
-  padding: 5%;
-  margin: 5%;
+  height: 80vmin;
+  /* padding: 5%; */
+  margin: auto;
 
-  /* overflow-y: auto; */
+  /* position: relative; */
 
-  background-color: rgba(255, 192, 203, 0.42);
+  background-color: pink;
 }
+.absolute{
+  position: absolute;
+  /* bottom:0;
+  left:0;
+  top:0;
+  right: 0;
 
-.btn{
-  display: block;
-  min-width: 100px;
-  width: 100%;
-  max-width: 200px;
-  height: 3em;
-  padding: 0.7em;
+  z-index: 3;
+  background-color: teal; */
 }
-.text-overflow{
-  /*max-width*/
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
+.top0{
+  top:0;
 }
-.heading{
-  max-width: 500px;
+.top50{
+  top:50%;
+}
+.bottom0{
+  bottom:0;
+}
+.left{
+  left:0;
+}
+.right0{
+  right:0;
+}
+.z-index{
+  z-index: 3;
+}
+.block{
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+
+  outline: 1px solid #333;
+
+  background-color: orange;
+}
+.static{
+  position: static;
+  /* top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  z-index: 1; */
+}
+.relative{
+  /* margin: 20px 0; */
+  position: relative;
+  /* top: 50%;
+  left: 100%; */
+  /* bottom: -20px; */
+  /* right: 0;
+  bottom:0;*/
+  /* z-index: -1;  */
+}
+.fixed{
+  position: fixed;
+  bottom:0;
+  left:0;
+  z-index: 2;
 }
