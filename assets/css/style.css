@@ -16,8 +16,6 @@ ul {
 main{
   margin: 5%;
 }
-
-
 /* h2::first-letter,
 p::first-letter{
   padding: 0 1rem;
@@ -37,3 +35,47 @@ p::first-line{
   background-color: #ccc;
   color: blue;
 }
+
+
+.heading{
+  width: 70%;
+  margin: auto;
+
+  position: relative;
+
+  background-color:#ccc;
+  /* color: teal; */
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.heading::first-line{
+  color: teal;
+}
+.heading::before,
+.heading::after{
+  display: block;
+  width: 1em;
+  height: 100%;
+  /* padding: 0.5em; */
+  /* border: 1px solid red; */
+
+  position: absolute;
+  top: 3px;
+
+  /* background-color:#eee; */
+  /* color: fuchsia; */
+
+  /* font-size: 0.8em; */
+}
+.heading::before{
+  content:url(./../icons/yin-yang.svg);
+}
+.heading::after{
+  content:url(./../icons/yin-yang.svg);
+  right: 0;
+}
+/* .heading:hover::before,
+.heading:hover::after{
+  color:salmon;
+} */
