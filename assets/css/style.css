@@ -17,12 +17,33 @@ img{
   width: 100%;
 }
 
+.navigate ul{
+  text-align: center;
+}
+.navigate li{
+  display: inline-block;
+  background-color: darkblue;
+  color:aliceblue;
+}
+.navigate a{
+  display: inline-block;
+  padding: 0.5em 1em;
+}
+.navigate li:hover{
+  background-color: red;
+  color:yellow;
+  transition: all 0.5s 0.5s;
+}
+
+
+
 main{
   margin: 5%;
 }
 
 .slider{
   position: relative;
+  overflow: hidden;
 }
 
 .slider::before,
@@ -36,13 +57,16 @@ main{
   position: absolute;
   top: 45%;
   opacity: 0;
-  transition: opacity 1.5s 0.3s;
+  transition-duration:  1.5s, 0.7s;
+  transition-delay: 0.3s;
 }
 .slider::before{
-  left:0;
+  left:-17%;
+  transition-property: opacity , left;
 }
 .slider::after{
-  right:0;
+  right:-17%;
+  transition-property: opacity , right ;
   /* transform: rotate(180deg); */
   /* transform: skewX(0deg); */
   transform: scaleX(-1);
@@ -50,6 +74,12 @@ main{
 .slider:hover::before,
 .slider:hover::after{
   opacity: 1;
+}
+.slider:hover::before{
+  left: 0%;
+}
+.slider:hover::after{
+  right: 0%;
 }
 
 
