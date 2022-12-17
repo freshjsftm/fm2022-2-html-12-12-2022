@@ -15,108 +15,16 @@ ul {
 }
 img{
   width: 100%;
+  object-fit: cover;
 }
 
-.navigate ul{
+.user-card{
+  max-width: 400px;
+  width: 100%;
+  min-width: 200px;
+  margin: auto;
   text-align: center;
 }
-.navigate li{
-  display: inline-block;
-  background-color: darkblue;
-  color:aliceblue;
-}
-.navigate a{
-  display: inline-block;
-  padding: 0.5em 1em;
-}
-.navigate li:hover{
-  background-color: red;
-  color:yellow;
-  transition: all 0.5s 0.5s;
-}
-
-
-
-main{
-  margin: 5%;
-}
-
-.slider{
-  position: relative;
-  overflow: hidden;
-}
-
-.slider::before,
-.slider::after{
-  content:url(./../icons/yin-yang.svg);
-  display: block;
-  max-width: 100px;
-  width: 10%;
-  min-width: 30px;
-  /* height: 10vmin; */
-  position: absolute;
-  top: 45%;
-  opacity: 0;
-  transition-duration:  1.5s, 0.7s;
-  transition-delay: 0.3s;
-}
-.slider::before{
-  left:-17%;
-  transition-property: opacity , left;
-}
-.slider::after{
-  right:-17%;
-  transition-property: opacity , right ;
-  /* transform: rotate(180deg); */
-  /* transform: skewX(0deg); */
-  transform: scaleX(-1);
-}
-.slider:hover::before,
-.slider:hover::after{
-  opacity: 1;
-}
-.slider:hover::before{
-  left: 0%;
-}
-.slider:hover::after{
-  right: 0%;
-}
-
-
-/* h2::after{
-  content: 'title';
-  display: block;
-  transform: scaleY(-1) translateY(20px);
-  color: transparent;
-  text-shadow: 1px 1px 5px #aaa;
-} */
-
-
-.block{
-  width: 10%;
-  height: 60px;
-  margin-bottom: 2%;
-  background-color: fuchsia;
-  /* transition: width 1s 0.4s ease, background-color 3s 0.4s ease; */
-  transition-property: width, background-color;
-  transition-duration: 1s, 3s;
-  transition-delay: 0.4s;
-  /* transition-timing-function: ease; */
-}
-.wrapper:hover>.block{
-  width: 100%;
-  background-color: blue;
-  transition-duration: 0.5s, 1.5s;
-}
-.ease{
-  transition-timing-function: ease;
-}
-.ease-in{
-  transition-timing-function: ease-in;
-}
-.ease-out{
-  transition-timing-function: ease-out;
-}
-.linear{
-  transition-timing-function: linear;
+.user-card__avatar>img{
+  clip-path: polygon(76% 0, 100% 70%, 50% 100%, 0% 70%, 24% 0);
 }
