@@ -13,69 +13,80 @@ a {
 ul {
   list-style: none;
 }
+img{
+  width: 100%;
+}
+
 main{
   margin: 5%;
 }
-/* h2::first-letter,
-p::first-letter{
-  padding: 0 1rem;
-  background-color:blanchedalmond;
-  color: teal;
-  font-size: 3rem;
-  text-transform: uppercase;
-} */
 
-p::first-line{
-  background-color: yellow;
-  color:purple;
-  line-height: 2em; 
-}
-
-::selection{
-  background-color: #ccc;
-  color: blue;
-}
-
-
-.heading{
-  width: 70%;
-  margin: auto;
-
+.slider{
   position: relative;
+}
 
-  background-color:#ccc;
-  /* color: teal; */
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 1.5rem;
-}
-.heading::first-line{
-  color: teal;
-}
-.heading::before,
-.heading::after{
+.slider::before,
+.slider::after{
+  content:url(./../icons/yin-yang.svg);
   display: block;
-  width: 1em;
-  height: 100%;
-  /* padding: 0.5em; */
-  /* border: 1px solid red; */
-
+  max-width: 100px;
+  width: 10%;
+  min-width: 30px;
+  /* height: 10vmin; */
   position: absolute;
-  top: 3px;
+  top: 45%;
+  opacity: 0;
+  transition: opacity 1.5s 0.3s;
+}
+.slider::before{
+  left:0;
+}
+.slider::after{
+  right:0;
+  /* transform: rotate(180deg); */
+  /* transform: skewX(0deg); */
+  transform: scaleX(-1);
+}
+.slider:hover::before,
+.slider:hover::after{
+  opacity: 1;
+}
 
-  /* background-color:#eee; */
-  /* color: fuchsia; */
 
-  /* font-size: 0.8em; */
-}
-.heading::before{
-  content:url(./../icons/yin-yang.svg);
-}
-.heading::after{
-  content:url(./../icons/yin-yang.svg);
-  right: 0;
-}
-/* .heading:hover::before,
-.heading:hover::after{
-  color:salmon;
+/* h2::after{
+  content: 'title';
+  display: block;
+  transform: scaleY(-1) translateY(20px);
+  color: transparent;
+  text-shadow: 1px 1px 5px #aaa;
 } */
+
+
+.block{
+  width: 10%;
+  height: 60px;
+  margin-bottom: 2%;
+  background-color: fuchsia;
+  /* transition: width 1s 0.4s ease, background-color 3s 0.4s ease; */
+  transition-property: width, background-color;
+  transition-duration: 1s, 3s;
+  transition-delay: 0.4s;
+  /* transition-timing-function: ease; */
+}
+.wrapper:hover>.block{
+  width: 100%;
+  background-color: blue;
+  transition-duration: 0.5s, 1.5s;
+}
+.ease{
+  transition-timing-function: ease;
+}
+.ease-in{
+  transition-timing-function: ease-in;
+}
+.ease-out{
+  transition-timing-function: ease-out;
+}
+.linear{
+  transition-timing-function: linear;
+}
